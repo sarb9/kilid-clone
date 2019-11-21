@@ -1,0 +1,221 @@
+@font-face {
+    font-family: "IRANSans";
+    src: url("images/IRANSansWeb_UltraLight.ttf");
+    }
+
+body {
+    font-family: IRANSans;
+    margin: 0px
+}
+
+.header-parent {
+    width: 100%;
+}
+
+.header {
+    direction: rtl;
+    background: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e5e5;
+    height: 65px;
+    padding: 0px 40px;
+  }
+
+.header-items {
+    direction: rtl;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    width: calc(100vw - 220px);
+}
+
+.items {
+    overflow: scroll;
+    display: flex;
+    flex-direction: row;
+}
+
+.header-item {
+    align-self: center;
+    margin-left: 25px;
+    font-size: 13px;
+    white-space: nowrap;
+    height: 25px;
+}
+
+.header-item:hover {
+    color: #b30752;
+    border-bottom: #b30752 solid 1px;
+}
+
+.enter-register-bottom {
+    width: 98px;
+    height: 28x;
+    padding: 5px;
+    margin: 0px;
+    text-align: center;
+    background-color: #b30752;
+    border-radius: 20px;
+    color: white;
+    transition: ease 0.3s background-color;
+    border: 1px solid #b30752;
+}
+
+.page-body {
+    background-image: url("images/background.jpg");
+    padding: 0px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.search-box {
+    color: black;
+    margin-top: 46px;
+    align-self: center;
+    color: #373435;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-items {
+    direction: rtl;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+
+.search-item {
+    background-color: rgba(65, 65, 65, 0.7);
+    color: white;
+    border: 1px white solid;
+    border-radius: 35px;
+    margin-left: 5px;
+    width: 225px;
+    height: 40px;
+    align-self: center;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transition: ease 0.9 all;
+}
+
+.search-item:hover {
+    background-color: rgba(65, 65, 65, 0.9);
+}
+
+.search-items > :first-child {
+    background-color: #b30752;
+}
+
+.search-title {
+    font-size: 26px;
+    align-self: center;
+    text-align: center;
+}
+
+.search-area {
+    background: rgba(0, 0, 0, 0.5);
+    width: 640px;
+    height: 76px;
+    border-radius: 40px;
+    font-size: 40px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.searh-text {
+    align-self: center;
+}
+
+.enter-register-bottom:hover {
+    background-color: white;
+}
+
+.magnifire {
+    background-color: #b30752;
+    border-radius: 25px;
+    align-self: center;
+    width: 100px;
+    height: 46px;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+    margin-left: 10px;
+}
+
+.search-loc-box {
+    background-color: white;
+    width: 500px;
+    height: 46px;
+    border-radius: 25px;
+    align-self: center;
+    margin-left: 10px;
+    direction: rtl;
+}
+
+.location-mark {
+    font-size: 30px;
+    color: black;
+    align-self: center;
+    margin-right: 5px;
+    display: flex !important;
+    line-height: 49px !important;
+}
+
+.magnifire-text {
+    align-self: center;
+}
+
+  
+  /* The sticky class is added to the header with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  #kilid-logo {
+      width: 134px;
+      height: 35px;
+      margin-left: 25px;
+      align-self: center;
+  }
+
+  @media (max-width:600px) {
+      .header {
+          height: auto;
+          padding: 0px;
+          flex-direction: column;
+      }
+      .header-items {
+          flex-direction: column;
+          width: auto
+      }
+      .items {
+          flex-direction: column;
+          overflow: visible;
+          padding-top: 40px;
+      }
+      .sticky {
+          position: relative;
+      }
+      #kilid-logo {
+          position: fixed;
+          top: 0px;
+      }
+
+  }
