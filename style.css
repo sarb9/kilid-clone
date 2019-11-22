@@ -3,9 +3,15 @@
     src: url("images/IRANSansWeb_UltraLight.ttf");
     }
 
-body {
+body, span, input {
     font-family: IRANSans;
-    margin: 0px
+    margin: 0px;
+}
+input:focus {
+    outline: none;
+}
+* {
+    box-sizing: border-box;
 }
 
 .header-parent {
@@ -28,11 +34,21 @@ body {
     font-weight: bold;
     display: flex;
     flex-direction: row;
-    width: calc(100vw - 220px);
+    width: 100%;
+    justify-content: space-between;
+}
+
+.inner-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.burger {
+    display: none;
 }
 
 .items {
-    overflow: scroll;
     display: flex;
     flex-direction: row;
 }
@@ -132,6 +148,18 @@ body {
     color: white;
     display: flex;
     flex-direction: row;
+    position: relative;
+}
+
+.search-area .advanced-seacrh {
+    padding: 5px 10px;
+    font-size: 12px;
+    position: absolute;
+    height: 30px;
+    bottom: -30px;
+    left: 40%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 15px 15px;
 }
 
 .searh-text {
@@ -164,10 +192,37 @@ body {
     align-self: center;
     margin-left: 10px;
     direction: rtl;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-loc-city {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-left: 1px solid #ccc;
+    width: 30%;
+}
+
+.search-loc-city input {
+    width: 80%;
+    border: none;
+    margin-right: 10px;
+}
+
+.search-loc-neighborhood {
+    display: flex;
+    margin-left: 21px;
+    width: 55%;
+}
+
+.search-loc-neighborhood input {
+    width: 100%;
+    border: none;
 }
 
 .location-mark {
-    font-size: 30px;
+    font-size: 20px;
     color: black;
     align-self: center;
     margin-right: 5px;
@@ -193,6 +248,17 @@ body {
       height: 35px;
       margin-left: 25px;
       align-self: center;
+  }
+
+  @media (max-width: 1130px)  {
+    .inner-container {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+        font-size: 40px;
+    }
   }
 
   @media (max-width:600px) {
